@@ -4,6 +4,7 @@ const express = require('express');
 const { default: ModelManager } = require('sequelize/types/model-manager');
 const PORT = process.env.PORT || 3001;
 const { db, PeopleModel } = require('./models');
+app.use(express.json());
 
 const app = express();
 
