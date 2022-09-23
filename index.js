@@ -10,8 +10,6 @@ const { start } = require('./src/server');
 db.sync()
   .then(() => {
     console.log(`Successful Connection!`);
-    // proof of life//danger//harcoded
-    // PeopleModel.create({ name: 'Jack' });
   })
   .catch(err => console.error(err));
 
