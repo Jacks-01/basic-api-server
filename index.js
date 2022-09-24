@@ -2,7 +2,7 @@
 
 
 // requires from the models/index.js
-const { db, CatModel} = require('./src/models');
+const { db, CatModel, HatModel} = require('./src/models');
 const { start } = require('./src/server');
 
 

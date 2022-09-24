@@ -13,8 +13,8 @@ const DATABASE_URL = process.env.NODE_ENV === 'test'
 const db = new Sequelize(DATABASE_URL);
 
 //create CatModel with our schema
-const CatModel = catSchema(db, DataTypes);
 //create HatModel with our schema
+const CatModel = catSchema(db, DataTypes);
 const HatModel = hatSchema(db, DataTypes);
 
 
