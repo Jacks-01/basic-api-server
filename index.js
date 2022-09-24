@@ -1,8 +1,8 @@
 'use strict';
 
 
-// requires from the model/index.js
-const { db, PeopleModel } = require('./src/models');
+// requires from the models/index.js
+const { db, CatModel} = require('./src/models');
 const { start } = require('./src/server');
 
 
@@ -14,3 +14,4 @@ db.sync()
   .catch(err => console.error(err));
 
 start();
+
