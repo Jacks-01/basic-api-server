@@ -35,12 +35,17 @@ router.post('/cats', async (req, res, send) => {
 //* updating a cat
 router.put('/cats/:id', async (req, res, send) => {
   let id = req.params.id;
-  console.log(`PUT request for a cat with id: ${id}, req.body: ${req.body}`);
-
-  const cat = await CatModel.update(req.body, { where: { id } });
+  await CatModel.update(req.body, { where: { id } });
 
   const updatedCat = await CatModel.findAll({ where: { id } });
   res.status(200).send(updatedCat);
 });
 
+//* deleting a cat
+router.delete('/cats/:id', async (req, res, send) => {
+  const id = req.params.id;
+  await CatModel.destroy({ where: { id } });
+  const deletedCat = await CatModel.findAll({ where: { id } });
+  res.status(200).send(deletedCat);
+});
 module.exports = router;
