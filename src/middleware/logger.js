@@ -1,13 +1,8 @@
 'use strict';
 
-const logger = (req, res, next) => {
-  let log = {
-    method: req.method,
-    path: req.path,
-  };
-    
-  console.log(`Logger: ${JSON.stringify(log)}`);
+function logger (req, res, next){
+  console.log(`REQUEST: ${req.method}, ${req.originalUrl}`);
   next();
-};
+}
 
 module.exports = logger;
