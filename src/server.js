@@ -1,8 +1,8 @@
 'use strict';
 const express = require('express');
-const { db, CatModel, HatModel } = require('./models/');
 const PORT = process.env.PORT || 3001;
 const catRouter = require('./routes/cats');
+const hatRouter = require('./routes/hats');
 
 //* import  middleware and error handlers
 const logger = require('./middleware/logger');
@@ -14,6 +14,7 @@ app.use(express.json());
 app.use(logger);
 
 app.use(catRouter);
+app.use(hatRouter);
 
 app.use('*', notFound);
 app.use(errorHandler);
