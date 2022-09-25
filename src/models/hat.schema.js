@@ -1,6 +1,7 @@
+'use strict';
 
 module.exports = (db, DataTypes) => {
-  db.define('Hat', {
+  return db.define('Hat', {
     name: {
       type: DataTypes.STRING,
       allowNull: false,

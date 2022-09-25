@@ -2,7 +2,7 @@
 
 const express = require('express');
 const router = express.Router();
-const HatModel = require('../models/');
+const { HatModel } = require('../models/');
 const errorHandler = require('../error-handlers/500');
 
 //* getting all hats

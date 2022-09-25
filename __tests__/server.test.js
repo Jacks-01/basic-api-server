@@ -75,43 +75,43 @@ describe('Testing REST API', () => {
   });
 
   //* hat testing
-  // test('Create a new hat', async () => {
-  //   let response = await request.post('/hats').send({
-  //     name: 'tophat',
-  //     color: 'purple',
-  //   });
-  //   expect(response.status).toEqual(200);
-  //   expect(response.body.name).toEqual('tophat');
-  //   expect(response.body.color).toEqual('purple');
-  // });
+  test('Create a new hat', async () => {
+    let response = await request.post('/hats').send({
+      name: 'tophat',
+      color: 'purple',
+    });
+    expect(response.status).toEqual(200);
+    expect(response.body.name).toEqual('tophat');
+    expect(response.body.color).toEqual('purple');
+  });
 
-  // test('Read all hats', async () => {
-  //   let response = await request.get('/hats');
-  //   expect(response.status).toEqual(200);
-  //   expect(response.body[0].name).toEqual('tophat');
-  //   expect(response.body[0].color).toEqual('purple');
-  // });
+  test('Read all hats', async () => {
+    let response = await request.get('/hats');
+    expect(response.status).toEqual(200);
+    expect(response.body[0].name).toEqual('tophat');
+    expect(response.body[0].color).toEqual('purple');
+  });
 
-  // test('Read one hat', async () => {
-  //   let response = await request.get('/hats/1');
-  //   expect(response.status).toEqual(200);
-  //   expect(response.body[0].name).toEqual('tophat');
-  //   expect(response.body[0].color).toEqual('purple');
-  // });
+  test('Read one hat', async () => {
+    let response = await request.get('/hats/1');
+    expect(response.status).toEqual(200);
+    expect(response.body[0].name).toEqual('tophat');
+    expect(response.body[0].color).toEqual('purple');
+  });
 
-  // test('Update a hat', async () => {
-  //   let response = await request.put('/hats/1').send({
-  //     name: 'beanie',
-  //     color: 'black',
-  //   });
-  //   expect(response.status).toEqual(200);
-  //   expect(response.body[0].name).toEqual('beanie');
-  //   expect(response.body[0].color).toEqual('black');
-  // });
+  test('Update a hat', async () => {
+    let response = await request.put('/hats/1').send({
+      name: 'beanie',
+      color: 'black',
+    });
+    expect(response.status).toEqual(200);
+    expect(response.body[0].name).toEqual('beanie');
+    expect(response.body[0].color).toEqual('black');
+  });
 
-  // test('Delete a hat', async () => {
-  //   let response = await request.delete('/hats/1');
-  //   expect(response.status).toEqual(200);
-  //   expect(response.body).toEqual([]);
-  // });
+  test('Delete a hat', async () => {
+    let response = await request.delete('/hats/1');
+    expect(response.status).toEqual(200);
+    expect(response.body).toEqual([]);
+  });
 });
