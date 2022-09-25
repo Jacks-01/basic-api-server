@@ -1,18 +1,14 @@
-# LAB - Class xx
-
-## Project: Project Name Here
-
-### Author: Student/Group Name
+# LAB - Class 3
+## Project: basic api server
+### Author: Jack Stubblefield
 
 ### Problem Domain  
 
-Concise Description of why this app exists
-
+practice creating a server using sequelize models, postgres, and express.
 ### Links and Resources
 
-- [ci/cd](http://xyz.com) (GitHub Actions)
-- [back-end server url](http://xyz.com) (when applicable)
-- [front-end application](http://xyz.com) (when applicable)
+- [ci/cd](https://github.com/Jacks-01/basic-api-server/actions) (GitHub Actions)
+- [back-end server url](https://basic-api-server-js.herokuapp.com/) (when applicable)
 
 ### Setup
 
@@ -31,15 +27,15 @@ i.e.
 
 #### Features / Routes
 
-- Feature One: Details of feature
-- GET : `/hello` - specific route to hit
+- GET/POST/PUT/DELETE: `/cats` or `/cats/id`  
+- GET/POST/PUT/DELETE: `/hats` or `hats/id`
+
 
 #### Tests
 
 - How do you run tests?
-- Any tests of note?
-- Describe any tests that you did not complete, skipped, etc
-
+  - npm run test 
+  - npm run test-watch
 #### UML
 
-Link to an image of the UML for your application and response to events
+[UML DIAGRAM](uml-lab-03.png)
